@@ -3,24 +3,31 @@ import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   CustomButton({
+    required this.boxWidth,
+    required this.boxHeight,
     this.buttonText,
+    required this.backgroundColor,required this.textColor,
     Key? key,
   }) : super(key: key);
   String? buttonText;
+  double boxWidth;
+  double boxHeight;
+  Color backgroundColor;
+  Color textColor;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: Colors.greenAccent,
+          color: backgroundColor,
           borderRadius: BorderRadius.all(Radius.circular(10))),
-      width: 350,
-      height: 50,
+      width: boxWidth,
+      height: boxHeight,
       child: Center(
         child: Text(
-          buttonText!,
+          buttonText ?? "",
           style: TextStyle(
-              color: Colors.white, fontSize: 20, fontWeight: FontWeight.w600),
+              color: textColor, fontSize: 20, fontWeight: FontWeight.w600),
         ),
       ),
     );

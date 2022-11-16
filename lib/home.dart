@@ -6,12 +6,11 @@ import 'package:flutter/src/widgets/framework.dart';
 
 // ignore: camel_case_types
 class home extends StatelessWidget {
-  const home({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomSheet: Container(
+        color: Colors.white,
         height: 50,
         width: double.infinity,
         child: Column(
@@ -20,6 +19,7 @@ class home extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
       body: Container(
+        color: Colors.white,
         height: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

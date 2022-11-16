@@ -10,8 +10,6 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'onBoardingWidget.dart';
 
 class onboardingOne extends StatefulWidget {
-  const onboardingOne({super.key});
-
   @override
   State<onboardingOne> createState() => _onboardingOneState();
 }
@@ -113,31 +111,30 @@ class _onboardingOneState extends State<onboardingOne> {
                 ),
                 SizedBox(height: 30),
                 GestureDetector(
-                    onTap: () {
-                      currentPage == 2
-                          ? Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => LoginPageOne()))
-                          : boarding.nextPage(
-                              duration: Duration(milliseconds: 2),
-                              curve: Curves.linear);
-                    },
-                    child: currentPage == 2
-                        ? CustomButton()
-                        : Container(
-                            decoration: BoxDecoration(
-                                color: Colors.greenAccent,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10))),
-                            width: 350,
-                            height: 50,
-                            child: Center(
-                              child: Text(
-                                'Next',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 16),
-                              ),
-                            ),
-                          ))
+                  onTap: () {
+                    currentPage == 2
+                        ? Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => LoginPageOne()))
+                        : boarding.nextPage(
+                            duration: Duration(milliseconds: 2),
+                            curve: Curves.linear);
+                  },
+                  child: currentPage == 2
+                      ? CustomButton(
+                          buttonText: 'Get Started',
+                          backgroundColor: Colors.greenAccent,
+                          textColor: Colors.white,
+                          boxHeight: 50,
+                          boxWidth: 350,
+                        )
+                      : CustomButton(
+                          buttonText: 'Next',
+                          backgroundColor: Colors.greenAccent,
+                          textColor: Colors.white,
+                          boxHeight: 50,
+                          boxWidth: 350,
+                        ),
+                ),
               ],
             ),
           )),

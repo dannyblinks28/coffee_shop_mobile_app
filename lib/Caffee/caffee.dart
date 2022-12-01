@@ -66,85 +66,88 @@ class Caffee extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 10),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      height: 200,
-                      width: 200,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          image: DecorationImage(
-                              image:
-                                  AssetImage('assets/images/coverImage.webp'),
-                              fit: BoxFit.fill)),
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 20.0, bottom: 10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Spacer(),
-                            Text(
-                              'Coffee Bean',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 20),
-                            ),
-                            SizedBox(height: 5),
-                            Row(
-                              children: [
-                                Icon(
-                                  Icons.location_on_outlined,
-                                  color: Colors.white,
-                                ),
-                                Text(
-                                  'Bali, Indonesia',
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                              ],
-                            )
-                          ],
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 200,
+                        width: 200,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            image: DecorationImage(
+                                image:
+                                    AssetImage('assets/images/coverImage.webp'),
+                                fit: BoxFit.fill)),
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 20.0, bottom: 10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Spacer(),
+                              Text(
+                                'Coffee Bean',
+                                style:
+                                    TextStyle(color: Colors.white, fontSize: 20),
+                              ),
+                              SizedBox(height: 5),
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.location_on_outlined,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    'Bali, Indonesia',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                    SizedBox(width: 10),
-                    Container(
-                      height: 200,
-                      width: 200,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          image: DecorationImage(
-                              image:
-                                  AssetImage('assets/images/coverImage.webp'),
-                              fit: BoxFit.fill)),
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 20.0, bottom: 10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Spacer(),
-                            Text(
-                              'Coffee Bean',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 20),
-                            ),
-                            SizedBox(height: 5),
-                            Row(
-                              children: [
-                                Icon(
-                                  Icons.location_on_outlined,
-                                  color: Colors.white,
-                                ),
-                                Text(
-                                  'Bali, Indonesia',
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                              ],
-                            )
-                          ],
+                      SizedBox(width: 10),
+                      Container(
+                        height: 200,
+                        width: 200,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            image: DecorationImage(
+                                image:
+                                    AssetImage('assets/images/coverImage.webp'),
+                                fit: BoxFit.fill)),
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 20.0, bottom: 10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Spacer(),
+                              Text(
+                                'Coffee Bean',
+                                style:
+                                    TextStyle(color: Colors.white, fontSize: 20),
+                              ),
+                              SizedBox(height: 5),
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.location_on_outlined,
+                                    color: Colors.white,
+                                  ),
+                                  Text(
+                                    'Bali, Indonesia',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
                         ),
-                      ),
-                    )
-                  ],
+                      )
+                    ],
+                  ),
                 ),
                 SizedBox(height: 20),
                 Row(

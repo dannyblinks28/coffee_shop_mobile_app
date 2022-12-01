@@ -9,7 +9,6 @@ import 'package:coffee_shop_mobile_app/Profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
 
 import '../Caffee/explore.dart';
 import 'homePageReview.dart';
@@ -76,7 +75,7 @@ class HomePage extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         Text(
-                          '------------------------------------------------------',
+                          '------------------------------------------------',
                           style: TextStyle(color: Colors.green, fontSize: 18),
                         ),
                         Row(
@@ -178,6 +177,7 @@ class HomePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             'My Reward',
@@ -206,7 +206,7 @@ class HomePage extends StatelessWidget {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(10)),
                         child: Padding(
-                          padding: const EdgeInsets.all(20.0),
+                          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -222,7 +222,7 @@ class HomePage extends StatelessWidget {
                                   Row(
                                     children: [
                                       Text(
-                                        'Free1Coffee',
+                                        'Free 1 Coffee',
                                         style: TextStyle(
                                             fontSize: 16,
                                             fontWeight: FontWeight.bold),

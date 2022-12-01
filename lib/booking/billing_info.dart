@@ -47,15 +47,7 @@ class _BillingInfoState extends State<BillingInfo> {
           style: TextStyle(color: Colors.black, fontSize: 24),
         ),
         centerTitle: true,
-        leading: IconButton(
-          onPressed: () => Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => HomePage())),
-          icon: Icon(
-            Icons.arrow_back,
-            color: Colors.black,
-            size: 30,
-          ),
-        ),
+        iconTheme: IconThemeData(color: Colors.black),
         actions: [
           Icon(
             Icons.more_horiz,

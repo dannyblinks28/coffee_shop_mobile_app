@@ -48,7 +48,7 @@ class CustomSecondTab extends StatelessWidget {
                       style: TextStyle(color: Colors.green, fontSize: 20),
                     ),
                     SizedBox(height: 5),
-                    Row(
+                    Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           creamPrice,

@@ -1,3 +1,4 @@
+import 'package:coffee_shop_mobile_app/Order/feedback.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -16,7 +17,7 @@ class PaymentMethodOne extends StatelessWidget {
         child: GestureDetector(
             onTap: () {
               Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => CoverPlace()));
+                  .push(MaterialPageRoute(builder: (context) => FeedbackOne()));
             },
             child: Container(
               height: 50,

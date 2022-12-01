@@ -14,6 +14,7 @@ class TopUp extends StatefulWidget {
 
 class _TopUpState extends State<TopUp> {
   bool checkBoxValue = false;
+  String payment = 'card';
   bool isHiddenPassword = true;
   @override
   Widget build(BuildContext context) {
@@ -27,15 +28,8 @@ class _TopUpState extends State<TopUp> {
           style: TextStyle(color: Colors.black, fontSize: 24),
         ),
         centerTitle: true,
-        leading: IconButton(
-          onPressed: () => Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => HomePage())),
-          icon: Icon(
-            Icons.arrow_back,
-            color: Colors.black,
-            size: 30,
-          ),
-        ),
+        
+        iconTheme: IconThemeData(color: Colors.black),
         actions: [
           Icon(
             Icons.more_horiz,
@@ -138,7 +132,7 @@ class _TopUpState extends State<TopUp> {
                     style:
                         TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
                 SizedBox(height: 20),
-                //here
+                
                 Container(
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey.shade400),
@@ -155,10 +149,10 @@ class _TopUpState extends State<TopUp> {
                             Row(
                               children: [
                                 Checkbox(
-                                  value: checkBoxValue,
+                                  value: payment=='card',
                                   onChanged: (value) {
                                     setState(() {
-                                      checkBoxValue = value!;
+                                      payment = 'card';
                                     });
                                   },
                                 ),
@@ -295,10 +289,11 @@ class _TopUpState extends State<TopUp> {
                           Padding(
                             padding: const EdgeInsets.only(left: 8.0),
                             child: Checkbox(
-                              value: checkBoxValue,
+                              value: payment=='paypal',
+                              splashRadius: 40,
                               onChanged: (value) {
                                 setState(() {
-                                  checkBoxValue = value!;
+                                 payment = 'paypal';
                                 });
                               },
                             ),
@@ -336,10 +331,10 @@ class _TopUpState extends State<TopUp> {
                           Padding(
                             padding: const EdgeInsets.only(left: 8.0),
                             child: Checkbox(
-                              value: checkBoxValue,
+                              value: payment == 'bitcoin',
                               onChanged: (value) {
                                 setState(() {
-                                  checkBoxValue = value!;
+                                  payment = 'bitcoin';
                                 });
                               },
                             ),

@@ -31,15 +31,18 @@ class Profile extends StatelessWidget {
                     children: [
                       Stack(
                         children: [
-                          Positioned(
-                              child: CircleAvatar(
-                            backgroundImage:
-                                AssetImage('assets/images/profile1.jpg'),
-                            radius: 50,
-                          )),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 30.0),
+                            child: Positioned(
+                                child: CircleAvatar(
+                              backgroundImage:
+                                  AssetImage('assets/images/profile1.jpg'),
+                              radius: 50,
+                            )),
+                          ),
                           Positioned(
                               left: 30,
-                              top: 50,
+                              top: 80,
                               child: Container(
                                 child: Icon(
                                   Icons.camera_alt,

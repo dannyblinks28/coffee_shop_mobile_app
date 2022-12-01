@@ -15,7 +15,7 @@ class PaymentMethod extends StatefulWidget {
 }
 
 class _PaymentMethodState extends State<PaymentMethod> {
-  bool checkBoxValue = false;
+  String payment = 'card';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,10 +94,10 @@ class _PaymentMethodState extends State<PaymentMethod> {
                             Row(
                               children: [
                                 Checkbox(
-                                  value: checkBoxValue,
+                                  value: payment == 'credit card',
                                   onChanged: (value) {
                                     setState(() {
-                                      checkBoxValue = value!;
+                                      payment = 'credit card';
                                     });
                                   },
                                 ),
@@ -233,10 +233,10 @@ class _PaymentMethodState extends State<PaymentMethod> {
                           Padding(
                             padding: const EdgeInsets.only(left: 8.0),
                             child: Checkbox(
-                              value: checkBoxValue,
+                              value: payment == 'paypal',
                               onChanged: (value) {
                                 setState(() {
-                                  checkBoxValue = value!;
+                                  payment = 'paypal';
                                 });
                               },
                             ),
@@ -274,10 +274,10 @@ class _PaymentMethodState extends State<PaymentMethod> {
                           Padding(
                             padding: const EdgeInsets.only(left: 8.0),
                             child: Checkbox(
-                              value: checkBoxValue,
+                              value: payment == 'Bitcoin',
                               onChanged: (value) {
                                 setState(() {
-                                  checkBoxValue = value!;
+                                  payment = 'Bitcoin';
                                 });
                               },
                             ),

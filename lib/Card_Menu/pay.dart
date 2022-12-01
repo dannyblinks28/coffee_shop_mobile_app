@@ -15,7 +15,7 @@ class Pay extends StatefulWidget {
 
 class _PayState extends State<Pay> {
   bool isHiddenPassword = true;
-  bool checkBoxValue = false;
+  String payment = 'card';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,15 +49,7 @@ class _PayState extends State<Pay> {
           style: TextStyle(color: Colors.black, fontSize: 24),
         ),
         centerTitle: true,
-        leading: IconButton(
-          onPressed: () => Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => HomePage())),
-          icon: Icon(
-            Icons.arrow_back,
-            color: Colors.black,
-            size: 30,
-          ),
-        ),
+        iconTheme: IconThemeData(color: Colors.black),
         actions: [
           Icon(
             Icons.more_horiz,
@@ -266,8 +258,6 @@ class _PayState extends State<Pay> {
                     style:
                         TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
                 SizedBox(height: 20),
-                //payment method
-
                 Container(
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey),
@@ -280,10 +270,10 @@ class _PayState extends State<Pay> {
                           Padding(
                             padding: const EdgeInsets.only(left: 8.0),
                             child: Checkbox(
-                              value: checkBoxValue,
+                              value: payment == 'Credit card',
                               onChanged: (value) {
                                 setState(() {
-                                  checkBoxValue = value!;
+                                  payment = 'Credit card';
                                 });
                               },
                             ),
@@ -321,10 +311,10 @@ class _PayState extends State<Pay> {
                           Padding(
                             padding: const EdgeInsets.only(left: 8.0),
                             child: Checkbox(
-                              value: checkBoxValue,
+                              value: payment == 'paypal',
                               onChanged: (value) {
                                 setState(() {
-                                  checkBoxValue = value!;
+                                  payment = 'paypal';
                                 });
                               },
                             ),
@@ -362,10 +352,10 @@ class _PayState extends State<Pay> {
                           Padding(
                             padding: const EdgeInsets.only(left: 8.0),
                             child: Checkbox(
-                              value: checkBoxValue,
+                              value: payment == 'bitcoin',
                               onChanged: (value) {
                                 setState(() {
-                                  checkBoxValue = value!;
+                                  payment = 'bitcoin';
                                 });
                               },
                             ),
